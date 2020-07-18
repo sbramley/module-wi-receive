@@ -66,11 +66,11 @@ class ReceiveServiceProvider extends ServiceProvider
             // Checks if configuration is valid
             $this->guardAgainstInvalidConfiguration($config);
 
-            return new IDP;
+            return new Receive;
         });
 
         // Make alias for use with package name
-        $this->app->alias(IDP::class, $this->packageName);
+        $this->app->alias(Receive::class, $this->packageName);
     }
 
     /**
